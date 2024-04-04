@@ -1,0 +1,28 @@
+Q4:Write a Java Program to find the duplicate characters in a string
+
+Solution:
+import java.util.HashMap;
+public class DuplicateCharacterFinder {
+    public static void findDuplicateCharacters(String str) {
+        HashMap<Character, Integer> charCountMap = new HashMap<>();
+        char[] chars = str.toCharArray();
+
+        for (char ch : chars) {
+            if (Character.isLetter(ch)) {
+                ch = Character.toLowerCase(ch); 
+                charCountMap.put(ch, charCountMap.getOrDefault(ch, 0) + 1);
+            }
+        }
+        System.out.println("Duplicate Characters:");
+        for (char ch : charCountMap.keySet()) {
+            if (charCountMap.get(ch) > 1) {
+                System.out.println(ch + ": " + charCountMap.get(ch));
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        String str = "Hello World!";
+        findDuplicateCharacters(str);
+    }
+}
