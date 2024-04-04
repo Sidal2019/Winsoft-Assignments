@@ -9,7 +9,7 @@ Y = { 1, 2, 3, 5, 7, 9, 10, 11, 15, 16, 18, 25, 50 }
 The maximum sum path is: 1 —> 2 —> 3 —> 6 —> 7 —> 9 —> 10 —> 12 —> 15 —> 16 —> 18 —> 100 
 The maximum sum is 199
   
-  Sution :
+Solution :
 
 public class MaxSumPath {
     public static int maxSumPath(int[] array1, int[] array2) {
